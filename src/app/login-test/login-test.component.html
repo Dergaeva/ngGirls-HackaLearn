@@ -1,0 +1,24 @@
+<p>login-test works!</p>
+
+<a href=".auth/login/github">Log in with GitHub</a><br>
+<a href=".auth/login/twitter">Log in with Twitter</a><br>
+<a href=".auth/login/aad">Log in with AAD</a><br>
+
+<br>
+<iframe src=".auth/me"></iframe>
+
+<br>
+
+<div *ngIf="user$ | async as user">
+
+  <h2>User details:</h2>
+  {{ user | json }}
+
+  <h2>Username:</h2>
+  {{ user.clientPrincipal.userDetails }}
+
+</div>
+
+
+<br>
+<a href=".auth/logout">Log out</a>
