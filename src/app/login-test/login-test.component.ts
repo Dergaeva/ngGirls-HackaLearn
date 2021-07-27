@@ -9,11 +9,14 @@ import { Observable } from 'rxjs';
 })
 export class LoginTestComponent implements OnInit {
   user$!: Observable<any>;
+  helloMessage$!: Observable<any>;
 
   constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
     this.user$ = this.authService.getUser$();
+
+    this.helloMessage$ = this.authService.getHello$('ngGirls');
   }
 
 }

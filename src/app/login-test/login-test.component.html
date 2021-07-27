@@ -4,6 +4,14 @@
 <a href=".auth/login/twitter">Log in with Twitter</a><br>
 <a href=".auth/login/aad">Log in with AAD</a><br>
 
+<div *ngIf="helloMessage$ | async as helloMessage">
+  {{ helloMessage.responseMessage }}
+
+  <h2>Client Principal from API</h2>
+  {{ helloMessage.clientPrincipal | json }}!!!
+
+</div>
+
 <br>
 <iframe src=".auth/me"></iframe>
 
@@ -15,7 +23,7 @@
   {{ user | json }}
 
   <h2>Username:</h2>
-  {{ user.clientPrincipal.userDetails }}
+  {{ user.clientPrincipal?.userDetails }}
 
 </div>
 

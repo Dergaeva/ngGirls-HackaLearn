@@ -11,4 +11,10 @@ export class AuthService {
   getUser$() {
     return this.httpClient.get('.auth/me');
   }
+
+  getHello$(name:string) {
+    return this.httpClient.post(`api/HelloWorld`,{});
+    // return this.httpClient.get(`api/HelloWorld?name=Hello`, {responseType: 'text'});
+
+  }
 }
