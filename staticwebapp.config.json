@@ -1,0 +1,9 @@
+{
+  "routes": [
+    {
+      "route": "/admin",
+      "redirect": "index.html",
+      "allowedRoles": ["authenticated"]
+    }
+  ]
+}
